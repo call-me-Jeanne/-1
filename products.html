@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>mainpage</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="icon" href="image/favicon.png" type="image/x-icon">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+  <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="image/logo.png" alt="mainpage logo">
+            </a>
+        </div>
+        <div class="contact">
+            <p>
+                <img src="image/phone.png" alt="phone:"> 8(383-41)2-16-80
+            </p>
+            <p>
+                <img src="image/mail.png" alt="e-mail:"> vovandell@mail.ru
+            </p>
+            <p>
+                <img src="image/shopcart.png" alt="shopcart:"> 0 item in yuor cart
+            </p>
+        </div>
+        <div class="header_line">
+            <div class="nav">
+                <p>
+                    <a href="index.html">COMPANY</a>
+                </p>
+                <p>
+                    <a href="why_us.html">WHY US</a>
+                </p>
+                <p>
+                    <a href="products.html">PRODUCTS</a>
+                </p>
+                <p>
+                    <a href="partners.html">PARTNERS</a>
+                </p>
+                <p>
+                    <a href="support.html">SUPPORT</a>
+                </p>
+                <p>
+                    <a href="contact.html">CONTACT</a>
+                </p>
+            </div>
+            <div class="search">
+                <form method="get" action="/search" target="_blank">
+                    <input class="search_in" name="q" id="form-query" value="" placeholder="Search">
+                    <input class="search_bot" src="image/search.png" type="image"></form>
+
+            </div>
+        </div>
+    </div>
+  </header>
+    <div class="banner">
+    <span class="span1">AMAZINGLY FAST</span>
+    <span class="span2">DELIVERY</span>
+        <div style = 'height: 100px;'>
+            <img class="img1" src='image\banner.png' alt = 'Фото 1' id="image_1"/>
+            <img class="img2" src='image\banner1.png' alt = 'Фото 2' id="image_2"/>
+            <img class="img2" src='image\banner2.png' alt = 'Фото 3' id="image_3"/>
+            <img class="img2" src='image\banner3.png' alt = 'Фото 4' id="image_4"/>
+            <script type='text/javascript'>
+                var total_pics_num = 4;  // количество изображений
+                var interval = 2600;     // задержка между изображениями
+                var time_out = 0.3;        // задержка смены изображений
+                var i = 0;
+                var timeout;
+                var opacity = 100;
+                function fade_to_next()
+                {
+                    opacity--;
+                    var k = i + 1;
+                    var image_now = 'image_' + i;
+                    if (i == total_pics_num) k = 1;
+                    var image_next = 'image_' + k;
+                    document.getElementById(image_now).style.filter = 'alpha(opacity='+ opacity +')';
+                    document.getElementById(image_next).style.filter = 'alpha(opacity='+ (100-opacity) +')';
+                    document.getElementById(image_now).style.opacity = opacity/100;
+                    document.getElementById(image_next).style.opacity = (100-opacity)/100;
+                    timeout = setTimeout("fade_to_next()", time_out);
+                    if (opacity==1) {
+                        opacity = 100;
+                        clearTimeout(timeout);
+                    }
+                }
+                setInterval (
+                        function() {
+                            i++;
+                            if (i > total_pics_num) i=1;
+                            fade_to_next();
+                        }, interval
+                );
+            </script>
+        </div>
+    <button class="order_bot" type="submit" value="Submit">ORDER NOW</button>
+    </div>
+  <section>
+      <div>
+
+
+      </div>
+
+  </section>
+</div>
+<div class="page-buffer"></div>
+
+
+  <footer>
+      <div class="buttom_menu">
+          <table>
+              <tr>
+                  <td>
+                  <ul>
+                      <li class="decor" style="list-style-type: square"><a href="index.html">Company</a></li>
+                  </ul>
+                  </td>
+                  <td>
+                      <ul>
+                          <li class="decor" style="list-style-type: square"><a href="products.html">Products</a></li>
+                      </ul>
+                  </td>
+                  <td>
+                      <ul>
+                          <li class="decor" style="list-style-type: square"><a href="support.html">Support</a></li>
+                      </ul>
+                  </td>
+                  <td>
+                      <a href="http://www.twitter.com">
+                          <img src="image/icon_sn_tw.png" alt="twitter">
+                      </a>
+                  </td>
+                  <td>
+                      <a href="http://www.youtube.com">
+                          <img src="image/icon_sn_yt.png" alt="youTube">
+                      </a>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <ul>
+                          <li class="decor" style="list-style-type: square"><a href="why_us.html">Why us?</a></li>
+                      </ul>
+                  </td>
+                  <td>
+                      <ul>
+                          <li class="decor" style="list-style-type: square"><a href="partners.html">Partners</a></li>
+                      </ul>
+                  </td>
+                  <td>
+                      <ul>
+                          <li class="decor" style="list-style-type: square"><a href="contact.html">Contact</a></li>
+                      </ul>
+                  </td>
+                  <ul>
+                      <td>
+                          <a href="http://www.facebook.com">
+                              <img src="image/icon_sn_fb.png" alt="facebook">
+                          </a>
+                      </td>
+                      <td>
+                          <a href="http://www.vimeo.com">
+                              <img src="image/icon_sn_vi.png" alt="vimeo">
+                          </a>
+                      </td>
+              </tr>
+          </table>
+      </div>
+      <div class="bottom_logo">
+          <a href="index.html"><img src="image/bottomlogo.png" alt="logo"></a>
+          <p> &copy All right reserved</p>
+      </div>
+  </footer>
+
+</body>
+</html>
