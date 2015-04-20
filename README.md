@@ -1,1 +1,1 @@
-## Created to test Frontend skills
+## Ready template 'ProCorp' from pcklab.com
